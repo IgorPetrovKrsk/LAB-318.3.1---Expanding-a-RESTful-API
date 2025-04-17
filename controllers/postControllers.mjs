@@ -78,9 +78,10 @@ export function deletePostById(req, res, next) {
 
 export function getUserPostsByUserId(req, res, next) {
     let allPosts = [];
+    let userId  = (req.query.userId)?req.query.userId:req.params.userId;    
 
     posts.forEach((p) => {
-        if (p.userId == req.params.userId) {
+        if (p.userId == userId) {
             allPosts.push(p);
         }
     });

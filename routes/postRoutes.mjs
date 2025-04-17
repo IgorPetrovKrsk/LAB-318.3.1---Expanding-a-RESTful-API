@@ -20,6 +20,7 @@ router
   .patch(patchPostById)
   .delete(deletePostById);
 
-router.get('/userPost/:userId', getUserPostsByUserId);
+router.get('/userPost/:userId', getUserPostsByUserId); //2 different ways to fetch user posts from route parametr
+router.get('/userPost/', getUserPostsByUserId); // from query parametr
 
 export default router;
